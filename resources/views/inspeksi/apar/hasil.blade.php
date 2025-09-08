@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard Peralatan Tanggap Darurat UP2WVI - APAR</title>
+    <title>Dashboard Peralatan Tanggap Darurat UP2WV - APAR</title>
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/9/97/Logo_PLN.png" type="image/png" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -384,7 +384,7 @@
             MONITORING ALAT PEMADAM API RINGAN
             </h1>
             <h2 class="text-xs sm:text-sm text-white font-semibold">
-            PLN PUSHARLIS UP2W VI
+            PLN PUSHARLIS UP2W V
             </h2>
         </div>
 
@@ -394,7 +394,7 @@
                 MONITORING ALAT PEMADAM API RINGAN
             </h1>
             <h2 class="text-sm sm:text-base md:text-xl text-white font-semibold mt-1">
-            PLN PUSHARLIS UP2W VI
+            PLN PUSHARLIS UP2W V
             </h2>
         </div>
 
