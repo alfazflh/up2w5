@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Peralatan Tanggap Darurat UP2WVI - BOX HYDRANT</title>
+    <title>Dashboard Peralatan Tanggap Darurat UP2WV - BOX HYDRANT</title>
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/9/97/Logo_PLN.png" type="image/png" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     @vite('resources/css/app.css')
@@ -380,7 +380,7 @@
             MONITORING BOX HYDRANT
             </h1>
             <h2 class="text-xs sm:text-sm text-white font-semibold">
-            PLN PUSHARLIS UP2W VI
+            PLN PUSHARLIS UP2W V
             </h2>
         </div>
 
@@ -390,7 +390,7 @@
                 MONITORING BOX HYDRANT
             </h1>
             <h2 class="text-sm sm:text-base md:text-xl text-white font-semibold mt-1">
-            PLN PUSHARLIS UP2W VI
+            PLN PUSHARLIS UP2W V
             </h2>
         </div>
 
