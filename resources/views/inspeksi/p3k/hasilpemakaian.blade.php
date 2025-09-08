@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Dashboard Peralatan Tanggap Darurat UP2WVI - P3K</title>
+    <title>Dashboard Peralatan Tanggap Darurat UP2WV - P3K</title>
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/9/97/Logo_PLN.png" type="image/png" />
     @vite('resources/css/app.css')
     <style>
@@ -361,7 +361,7 @@
             MONITORING P3K
             </h1>
             <h2 class="text-xs sm:text-sm text-white font-semibold">
-            PLN PUSHARLIS UP2W VI
+            PLN PUSHARLIS UP2W V
             </h2>
         </div>
 
@@ -371,7 +371,7 @@
                 MONITORING P3K
             </h1>
             <h2 class="text-sm sm:text-base md:text-xl text-white font-semibold mt-1">
-            PLN PUSHARLIS UP2W VI
+            PLN PUSHARLIS UP2W V
             </h2>
         </div>
 
