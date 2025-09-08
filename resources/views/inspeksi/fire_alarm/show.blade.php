@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard Peralatan Tanggap Darurat UP2WVI - FIRE ALARM</title>
+    <title>Dashboard Peralatan Tanggap Darurat UP2WV - FIRE ALARM</title>
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/9/97/Logo_PLN.png" type="image/png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @vite('resources/css/app.css')
@@ -45,7 +45,7 @@
             MONITORING FIRE ALARM
             </h1>
             <h2 class="text-xs sm:text-sm text-white font-semibold">
-            PLN PUSHARLIS UP2W VI
+            PLN PUSHARLIS UP2W V
             </h2>
         </div>
 
@@ -55,7 +55,7 @@
                 MONITORING FIRE ALARM
             </h1>
             <h2 class="text-sm sm:text-base md:text-xl text-white font-semibold mt-1">
-            PLN PUSHARLIS UP2W VI
+            PLN PUSHARLIS UP2W V
             </h2>
         </div>
 
