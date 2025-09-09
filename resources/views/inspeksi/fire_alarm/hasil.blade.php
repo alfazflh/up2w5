@@ -591,7 +591,7 @@
                 <span class="font-normal" id="tanggal-bawah">-</span>
                 <p>Team Leader K3L & Kam</p>
                 <img src="https://ik.imagekit.io/pln/ttd.png?updatedAt=1752822909227" alt="Tanda Tangan">
-                <p>KUKUH TRI UTOMO</p>
+                <p>REFGINANDA AKNUR</p>
             </div>
         </div>
     </div>
