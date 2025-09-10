@@ -16,7 +16,7 @@ class CreateApatsTable extends Migration
             $table->string('drum')->nullable();
             $table->string('aduk_pasir')->nullable();
             $table->string('sekop')->nullable();
-            $table->string('karung_goni')->nullable();
+            $table->string('fire_blanket')->nullable();
             $table->string('ember')->nullable();
             $table->string('kesimpulan')->nullable();
             $table->date('tanggal_pemeriksaan')->nullable();

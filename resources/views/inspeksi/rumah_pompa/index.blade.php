@@ -111,7 +111,7 @@
                 @csrf
                 <div class="mb-3">
                     <label class="block font-semibold">ID Rumah Pompa</label>
-                    <input type="text" name="id_rumah" required class="w-full px-3 py-2 border rounded">
+                    <input type="text" name="id_rumah" required class="w-full px-3 py-2 border rounded" placeholder="cth: 1">
                 </div>
                 @php
                 $defaultCatatan = $rumahpompas->first()->catatan ?? '';
