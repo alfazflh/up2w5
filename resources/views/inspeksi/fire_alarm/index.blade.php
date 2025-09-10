@@ -112,11 +112,7 @@
             <div class="mb-3"><label class="block font-semibold">ID Fire Alarm</label><input type="text" name="id_firealarm" required class="w-full px-3 py-2 border rounded"></div>
             <div class="mb-3"><label class="block font-semibold">Lokasi</label><input type="text" name="lokasi" required class="w-full px-3 py-2 border rounded"></div>
             <div class="mb-3"><label class="block font-semibold">Nama Barang</label><input type="text" name="nama" required class="w-full px-3 py-2 border rounded"></div>
-            <div class="mb-4">
-                <label class="block text-gray-700 font-semibold mb-1">Catatan</label>
-                <input type="text" name="catatan" required class="w-full px-3 py-2 border rounded">
-            </div>
-            <p>*Bila ada penyimpangan segera dilaporkan ke ASMAN K3L KAM</p>
+            
             
 
             <div class="flex justify-end space-x-2 mt-4">
