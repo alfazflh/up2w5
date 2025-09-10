@@ -11,7 +11,8 @@ class ApatController extends Controller
     public function index()
     {
         $apats = Apat::all();
-        return view('inspeksi.apat.index', compact('apats'));
+        $apat = Apat::first() ?? new Apat(['catatan' => '-']);
+        return view('inspeksi.apat.index', compact('apats', 'apat'));
     }
 
     public function create($id_apat)
