@@ -109,7 +109,7 @@
             @csrf
             <div class="mb-4">
                 <label class="block text-gray-700 font-semibold mb-1">ID APAR</label>
-                <input type="text" name="id_apar" required class="w-full px-3 py-2 border rounded">
+                <input type="text" name="id_apar" required class="w-full px-3 py-2 border rounded" placeholder="cth: A1.01">
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 font-semibold mb-1">Lokasi</label>
@@ -121,12 +121,25 @@
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 font-semibold mb-1">Kapasitas (Kg)</label>
-                <input type="number" name="kapasitas" required class="w-full px-3 py-2 border rounded">
-            </div>            
+                <input 
+                    type="text" 
+                    name="kapasitas" 
+                    required 
+                    class="w-full px-3 py-2 border rounded"
+                    placeholder="cth: 2,5"
+                    oninput="this.value = this.value.replace(/[^0-9.,]/g, '')"
+                    >
+                </div>                                      
             <div class="mb-4">
                 <label class="block text-gray-700 font-semibold mb-1">Masa Berlaku</label>
                 <input type="date" name="masa_berlaku" required class="w-full px-3 py-2 border rounded">
             </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-semibold mb-1">Catatan</label>
+                <input type="text" name="catatan" required class="w-full px-3 py-2 border rounded">
+            </div>
+            <p>*Bila ada penyimpangan segera dilaporkan ke ASMAN K3L KAM</p>
+            
             
             
             <div class="flex justify-end space-x-2">

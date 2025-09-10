@@ -52,26 +52,32 @@ class AparController extends Controller
     }
 
     public function store(Request $request)
-{
-    $request->validate([
-        'id_apar' => 'required|string|max:255',
-        'lokasi' => 'required|string|max:255',
-        'isi_apar' => 'required|string|max:255',
-        'kapasitas' => 'required|string|max:255',
-        'catatan' => 'required|string|max:255',
-        'masa_berlaku' => 'required|date',
-    ]);
-
-    Apar::create([
-        'id_apar' => $request->id_apar,
-        'lokasi' => $request->lokasi,
-        'isi_apar' => $request->isi_apar,
-        'kapasitas' => $request->kapasitas,
-        'masa_berlaku' => $request->masa_berlaku,
-        'catatan' => $request->catatan,
-    ]);
+    {
+        $request->validate([
+            'id_apar' => 'required|string|max:255',
+            'lokasi' => 'required|string|max:255',
+            'isi_apar' => 'required|string|max:255',
+            'kapasitas' => 'required|string|max:255', // tetap string
+            'catatan' => 'required|string|max:255',
+            'masa_berlaku' => 'required|date',
+        ]);
     
-
-    return redirect()->route('apar.index')->with('success', 'APAR berhasil ditambahkan.');
-}
+        // ambil kapasitas dari request
+        $kapasitas = $request->kapasitas;
+    
+        // normalisasi: ubah titik jadi koma
+        $kapasitas = str_replace('.', ',', $kapasitas);
+    
+        Apar::create([
+            'id_apar' => $request->id_apar,
+            'lokasi' => $request->lokasi,
+            'isi_apar' => $request->isi_apar,
+            'kapasitas' => $kapasitas, // simpan hasil normalisasi
+            'masa_berlaku' => $request->masa_berlaku,
+            'catatan' => $request->catatan,
+        ]);
+    
+        return redirect()->route('apar.index')->with('success', 'APAR berhasil ditambahkan.');
+    }
+    
 }
