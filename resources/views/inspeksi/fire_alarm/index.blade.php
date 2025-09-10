@@ -109,9 +109,8 @@
         <h2 class="text-xl font-bold mb-4">Tambah FIRE ALARM Baru</h2>
         <form action="{{ route('fire_alarm.store') }}" method="POST">
             @csrf
-            <div class="mb-3"><label class="block font-semibold">ID Fire Alarm</label><input type="text" name="id_firealarm" required class="w-full px-3 py-2 border rounded"></div>
+            <div class="mb-3"><label class="block font-semibold">ID Fire Alarm</label><input type="text" name="id_firealarm" required class="w-full px-3 py-2 border rounded" placeholder="cth: PA.001"></div>
             <div class="mb-3"><label class="block font-semibold">Lokasi</label><input type="text" name="lokasi" required class="w-full px-3 py-2 border rounded"></div>
-            <div class="mb-3"><label class="block font-semibold">Nama Barang</label><input type="text" name="nama" required class="w-full px-3 py-2 border rounded"></div>
             
             
 

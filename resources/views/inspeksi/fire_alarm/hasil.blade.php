@@ -443,7 +443,6 @@
                                         'id_firealarm' => $pemeriksaan->id_firealarm,
                                         'tanggal' => \Carbon\Carbon::parse($pemeriksaan->tanggal_pemeriksaan)->locale('id')->translatedFormat('d F Y'),
                                         'lokasi' => $pemeriksaan->lokasi,
-                                        'nama' => $pemeriksaan->nama,
                                         'kondisi_fisik' => $pemeriksaan->kondisi_fisik,
                                         'fungsi' => $pemeriksaan->fungsi,
                                         'kesimpulan' => $pemeriksaan->kesimpulan,
@@ -557,8 +556,6 @@
             margin-top: 15px;
             table-layout: fixed;">
         <tr>
-            <td style="border: 1px solid black; padding: 3px; width: 18%;">NAMA BARANG</td>
-            <td style="border: 1px solid black; padding: 3px; width: 32%;">: <span id="detail-nama">-</span></td>
             <td style="border: 1px solid black; padding: 3px; width: 18%;">NO. SERI</td>
             <td style="border: 1px solid black; padding: 3px; width: 32%;">: <span id="detail-nomor">-</span></td>
         </tr>
@@ -648,7 +645,6 @@ function showDetail(data) {
     try {
         document.getElementById('detail-lokasi').innerText = data.lokasi || '-';
         document.getElementById('detail-nomor').innerText = data.id_firealarm || '-';
-        document.getElementById('detail-nama').innerText = data.nama || '-';
         document.getElementById('detail-tanggal').innerText = data.tanggal || '-';
         document.getElementById('detail-catatan').innerText = data.catatan || '-';
         const tglFormatted = tanggalbawah(data.tanggal);
