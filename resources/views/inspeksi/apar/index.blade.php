@@ -134,7 +134,7 @@
                 <label class="block text-gray-700 font-semibold mb-1">Masa Berlaku</label>
                 <input type="date" name="masa_berlaku" required class="w-full px-3 py-2 border rounded">
             </div>
-            <input type="hidden" name="catatan" value="{{ $apat->catatan }}">
+            <input type="hidden" name="catatan" value="{{ $apar->catatan }}">
             
             
             

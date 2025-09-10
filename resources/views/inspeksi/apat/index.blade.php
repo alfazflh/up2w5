@@ -107,11 +107,7 @@
             @csrf
             <div class="mb-3"><label class="block font-semibold">ID APAT</label><input type="text" name="id_apat" required class="w-full px-3 py-2 border rounded" placeholder="cth: A3.01"></div>
             <div class="mb-3"><label class="block font-semibold">Lokasi</label><input type="text" name="lokasi" required class="w-full px-3 py-2 border rounded"></div>
-            <div class="mb-4">
-                <label class="block text-gray-700 font-semibold mb-1">Catatan</label>
-                <input type="text" name="catatan" required class="w-full px-3 py-2 border rounded">
-            </div>
-            <p>*Bila ada penyimpangan segera dilaporkan ke ASMAN K3L KAM</p>
+            <input type="hidden" name="catatan" value="{{ $apat->catatan }}">
             
 
             <div class="flex justify-end space-x-2 mt-4">
