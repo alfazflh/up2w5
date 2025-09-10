@@ -859,7 +859,7 @@ function formatTanggalLengkap(data) {
 
 // pemakaian
 const tglFormatted = formatTanggalLengkap(data);
-document.getElementById('tanggal-bawah').innerText = `Surabaya, ${tglFormatted}`;
+document.getElementById('tanggal-bawah').innerText = `Semarang, ${tglFormatted}`;
 
 
                 document.getElementById('detail-tanggal').dataset.tanggal = data.tanggal_pemeriksaan || '';
