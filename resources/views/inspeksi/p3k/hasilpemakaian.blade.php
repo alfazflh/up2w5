@@ -749,7 +749,7 @@ function showDetail(data) {
 
 // Pemakaian
 const tglFormatted = formatTanggalLengkap(data);
-document.getElementById("tanggal-bawah").innerText = `Surabaya, ${tglFormatted}`;
+document.getElementById("tanggal-bawah").innerText = `Semarang, ${tglFormatted}`;
 
 
         // Format tanggal helper
