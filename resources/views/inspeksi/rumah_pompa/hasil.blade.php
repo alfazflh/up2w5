@@ -631,7 +631,7 @@
                 document.getElementById('detail-tanggal').innerText = tanggalFormatted;
                 document.getElementById('detail-catatan').innerText = data.catatan || '-';
                 const tglFormatted = tanggalbawah(data.tanggal);
-                document.getElementById('tanggal-bawah').innerText = `Surabaya, ${tglFormatted}`;
+                document.getElementById('tanggal-bawah').innerText = `Semarang, ${tglFormatted}`;
 
                 const tahunMatch = data.tanggal_pemeriksaan?.match(/\d{4}/);
                 const tahun = tahunMatch ? tahunMatch[0] : '2025';
