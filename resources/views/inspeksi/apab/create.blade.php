@@ -118,7 +118,7 @@
             </div>
     
             <div class="bg-blue-100 p-4 rounded-lg border-l-4 border-primary">
-                <h2 class="text-lg font-bold text-primary mb-1">Kondisi Alat Pemadam Api Ringan</h2>
+                <h2 class="text-lg font-bold text-primary mb-1">Kondisi Alat Pemadam Api Berat</h2>
                 <p class="text-sm text-gray-700">Kondisi diisi sesuai keadaan di lapangan</p>
             </div>
     
