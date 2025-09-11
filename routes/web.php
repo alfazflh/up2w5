@@ -3,11 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Inspeksi\AparController;
+use App\Http\Controllers\Inspeksi\ApabController;
 use App\Http\Controllers\Inspeksi\ApatController;
 use App\Http\Controllers\Inspeksi\FireAlarmController;
 use App\Http\Controllers\Inspeksi\HydrantBoxController;
 use App\Http\Controllers\Inspeksi\RumahPompaController;
 use App\Http\Controllers\Inspeksi\P3kController;
+use App\Http\Controllers\Inspeksi\PemeriksaanApabController;
 use App\Http\Controllers\Inspeksi\PemeriksaanAparController;
 use App\Http\Controllers\Inspeksi\PemeriksaanApatController;
 use App\Http\Controllers\Inspeksi\PemeriksaanFireAlarmController;
@@ -27,6 +29,13 @@ Route::prefix('pemeriksaan')->group(function () {
     Route::put('/{id}', [PemeriksaanAparController::class, 'update'])->name('pemeriksaan.update');
 });
 
+Route::prefix('pemeriksaan')->group(function () {
+    Route::post('/store', [PemeriksaanApabController::class, 'store'])->name('pemeriksaan.store');
+    Route::delete('/{id}', [PemeriksaanApabController::class, 'destroy'])->name('pemeriksaan.destroy');
+    Route::get('/{id}/edit-form', [PemeriksaanApabController::class, 'editForm']);
+    Route::put('/{id}', [PemeriksaanApabController::class, 'update'])->name('pemeriksaan.update');
+});
+
 Route::prefix('inspeksi')->group(function () {
 
     Route::controller(AparController::class)->prefix('apar')->group(function () {
@@ -35,6 +44,14 @@ Route::prefix('inspeksi')->group(function () {
         Route::get('/{id_apar}/inspeksi', 'create')->name('apar.inspeksi');
         Route::get('/{id_apar}/hasil', 'hasil')->name('apar.hasil');
         Route::post('/store', 'store')->name('apar.store');
+    });
+
+    Route::controller(ApabController::class)->prefix('apab')->group(function () {
+        Route::get('/', 'index')->name('apab.index');
+        Route::get('/{id_apab}', 'show')->name('apab.show');
+        Route::get('/{id_apab}/inspeksi', 'create')->name('apab.inspeksi');
+        Route::get('/{id_apab}/hasil', 'hasil')->name('apab.hasil');
+        Route::post('/store', 'store')->name('apab.store');
     });
 
     Route::controller(ApatController::class)->prefix('apat')->group(function () {
