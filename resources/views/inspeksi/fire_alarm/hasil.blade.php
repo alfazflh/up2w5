@@ -556,7 +556,7 @@
             margin-top: 15px;
             table-layout: fixed;">
         <tr>
-            <td style="border: 1px solid black; padding: 3px; width: 18%;">NO. SERI</td>
+            <td style="border: 1px solid black; padding: 3px; width: 5%;">NO. SERI</td>
             <td style="border: 1px solid black; padding: 3px; width: 32%;">: <span id="detail-nomor">-</span></td>
         </tr>
         <tr>
