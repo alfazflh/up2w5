@@ -83,7 +83,7 @@
             $alat = [
                 ['label' => 'APAR', 'route' => 'apar.index', 'icon' => 'https://seduhteh.wordpress.com/wp-content/uploads/2015/08/apar.png'],
                 ['label' => 'APAT', 'route' => 'apat.index', 'icon' => 'https://ik.imagekit.io/pln/sekop.png'],
-                ['label' => 'APAB', 'route' => 'apat.index', 'icon' => 'https://ik.imagekit.io/pln/sekop.png'],
+                ['label' => 'APAB', 'route' => 'apab.index', 'icon' => 'https://ik.imagekit.io/pln/sekop.png'],
                 ['label' => 'Fire Alarm', 'route' => 'fire_alarm.index', 'icon' => 'https://phabcart.imgix.net/cdn/scdn/images/uploads/firealarm_square_web_600.png?auto=compress&lossless=1&w=500'],
                 ['label' => 'Box Hydrant', 'route' => 'boxhydrant.index', 'icon' => 'https://png.pngtree.com/png-vector/20250523/ourmid/pngtree-fire-hydrant-sign-red-vector-png-image_16363373.png'],
                 ['label' => 'Rumah Pompa', 'route' => 'rumah_pompa.index', 'icon' => 'https://png.pngtree.com/png-vector/20250523/ourmid/pngtree-fire-hydrant-sign-red-vector-png-image_16363373.png'],
