@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Apab extends Model
 {
-    protected $table = 'apars';
+    protected $table = 'apabs';
     protected $fillable = [
         'id_apab',
         'lokasi',
