@@ -583,8 +583,8 @@
         <tr>
             <td style="border: 1px solid black; padding: 3px; width: 18%;">LOKASI</td>
             <td style="border: 1px solid black; padding: 3px; width: 32%;">: <span id="detail-lokasi">-</span></td>
-            <td style="border: 1px solid black; padding: 3px; width: 18%;">ISI APAR</td>
-            <td style="border: 1px solid black; padding: 3px; width: 32%;">: <span id="detail-isi-apar">-</span></td>
+            <td style="border: 1px solid black; padding: 3px; width: 18%;">ISI APAB</td>
+            <td style="border: 1px solid black; padding: 3px; width: 32%;">: <span id="detail-isi-apab">-</span></td>
         </tr>
         <tr>
             <td style="border: 1px solid black; padding: 3px;">KAPASITAS</td>
@@ -643,7 +643,7 @@
 
 
 <!-- Floating Add Button -->
-<a href="{{ route('apar.inspeksi', ['id_apar' => $apar->id_apar]) }}"
+<a href="{{ route('apab.inspeksi', ['id_apab' => $apab->id_apab]) }}"
     class="fixed bottom-4 right-4 bg-gray-200 hover:bg-gray-300 text-primary rounded-full 
            p-2 text-sm shadow-lg z-50 
            sm:p-3 sm:text-lg">
@@ -682,7 +682,7 @@ function showDetail(data) {
     
     try {
         document.getElementById('detail-lokasi').innerText = data.lokasi || '-';
-        document.getElementById('detail-isi-apar').innerText = data.isi_apar || '-';
+        document.getElementById('detail-isi-apab').innerText = data.isi_apab || '-';
         document.getElementById('detail-kapasitas').innerText = data.kapasitas || '-';
         document.getElementById('detail-masa-berlaku').innerText = data.masa_berlaku || '-';
         document.getElementById('detail-tanggal').innerText = data.tanggal || '-';
@@ -817,7 +817,7 @@ function showDetail(data) {
     const parts = tanggalText.split(' '); 
     const bulan = parts[1] || 'Bulan';
     const tahun = parts[2] || 'Tahun';
-    const filename = 'Kartu Kendali APAR ' + bulan + ' ' + tahun + '.pdf';
+    const filename = 'Kartu Kendali APAB ' + bulan + ' ' + tahun + '.pdf';
     const opt = {
         margin: 0.3,
         filename: filename,
