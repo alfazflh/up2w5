@@ -97,7 +97,7 @@
     class="fixed bottom-4 right-4 bg-gray-200 hover:bg-gray-300 text-primary rounded-full 
            p-2 text-sm shadow-lg z-50 
            sm:p-3 sm:text-lg">
-    + Apar Baru
+    + APAR Baru
 </button>
 
 
