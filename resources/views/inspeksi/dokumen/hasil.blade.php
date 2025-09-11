@@ -105,7 +105,7 @@
                             </td>
                             <td class="px-4 py-3 text-center">
                                 <div class="flex flex-wrap gap-2 justify-center">
-                                    <a href="{{ asset('/storage/app/public/dokumen_ika/'.$item->file_dokumen) }}" target="_blank"
+                                    <a href="{{ asset('storage/dokumen_ika/'.$item->file_dokumen) }}" target="_blank"
                                         class="bg-blue-500 hover:bg-blue-600 text-white text-xs px-3 py-1 rounded">
                                         Lihat Dokumen
                                     </a>
