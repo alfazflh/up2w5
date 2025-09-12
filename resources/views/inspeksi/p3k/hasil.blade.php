@@ -727,7 +727,7 @@ margin-top: 0;
             <div class="signature-section">
                 <span class="!font-normal" id="tanggal-bawah">-</span>
                 <p>Team Leader K3L & Kam</p>
-                <img src="https://ik.imagekit.io/pln/ttd.png?updatedAt=1752822909227" alt="Tanda Tangan">
+                <img src="https://ik.imagekit.io/pln/ttdup2w5.png" alt="Tanda Tangan">
                 <p>REFGINANDA AKNUR</p>
             </div>
         </div>
