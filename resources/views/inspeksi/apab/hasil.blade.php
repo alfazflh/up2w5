@@ -451,7 +451,7 @@
                                         'lokasi' => $pemeriksaan->lokasi,
                                         'isi_apab' => $pemeriksaan->isi_apab,
                                         'kapasitas' => $pemeriksaan->kapasitas,
-                                        'masa_berlaku' => \Carbon\Carbon::parse($pemeriksaan->masa_berlaku)->translatedFormat('F Y'),
+                                        'masa_berlaku' => \Carbon\Carbon::parse($pemeriksaan->masa_berlaku)->translatedFormat('d F Y'),
                                         'pressure_gauge' => $pemeriksaan->pressure_gauge,
                                         'segel' => $pemeriksaan->segel,
                                         'selang' => $pemeriksaan->selang,
