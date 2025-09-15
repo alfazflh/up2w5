@@ -149,7 +149,7 @@
     </main>
 
     <footer class="text-center text-sm text-gray-500 py-6">
-        &copy; {{ date('Y') }} K3 PLN Pusharlis UP2WVI. All rights reserved.
+        &copy; {{ date('Y') }} K3 PLN Pusharlis UP2W VI. All rights reserved.
     </footer>
 
     <script>
