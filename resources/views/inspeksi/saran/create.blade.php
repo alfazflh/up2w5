@@ -92,7 +92,7 @@
             @csrf
 
             <div class="bg-white p-4 rounded-lg shadow-sm">
-                <label class="block font-semibold mb-1">Kritik dan saran demi kemajuan K3L & Keamanan PLN PUSHARLIS UP2WVI kedepannya <span class="text-red-500">*</span></label>
+                <label class="block font-semibold mb-1">Kritik dan saran demi kemajuan K3L & Keamanan PLN PUSHARLIS UP2W V kedepannya <span class="text-red-500">*</span></label>
                 <textarea name="saran" rows="5" class="w-full border border-gray-300 rounded-lg px-4 py-2" required></textarea>
             </div>
 
