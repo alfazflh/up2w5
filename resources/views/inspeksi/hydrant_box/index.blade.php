@@ -121,6 +121,7 @@
                     <label class="block font-semibold">Nama Barang</label>
                     <input type="text" name="nama" required class="w-full px-3 py-2 border rounded">
                 </div>
+                <input type="hidden" name="catatan" value="{{ $boxhydrant->catatan }}">
                 
 
                 <div class="flex justify-end space-x-2 mt-4">
