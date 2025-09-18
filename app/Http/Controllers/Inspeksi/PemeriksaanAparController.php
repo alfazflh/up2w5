@@ -75,7 +75,7 @@ public function editForm($id)
 
     return response()->json([
         'html' => '
-        <form method="POST" action="'.route('pemeriksaan.update', $p->id).'" class="space-y-4 text-sm">
+        <form method="POST" action="'.route('pemeriksaan-apar.update', $p->id).'" class="space-y-4 text-sm">
             '.csrf_field().method_field('PUT').'
 
             <div>
