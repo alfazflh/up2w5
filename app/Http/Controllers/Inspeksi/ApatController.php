@@ -11,8 +11,7 @@ class ApatController extends Controller
     public function index()
     {
         $apats = Apat::all();
-        $apat = Apat::first() ?? new Apat(['catatan' => '-']);
-        return view('inspeksi.apat.index', compact('apats', 'apat'));
+        return view('inspeksi.apat.index', compact('apats'));
     }
 
     public function create($id_apat)
@@ -39,13 +38,17 @@ class ApatController extends Controller
         return view('inspeksi.apat.show', compact('apat')); // kirim ke view
     }
 
-    public function hasil($id_apat)
-    {
-        $pemeriksaans = \App\Models\PemeriksaanApat::where('id_apat', $id_apat)->get();
-        $apat = \App\Models\Apat::where('id_apat', $id_apat)->first();
-    
-        return view('inspeksi.apat.hasil', compact('pemeriksaans', 'id_apat', 'apat'));
-    }
+public function hasil($id_apat)
+{
+    $pemeriksaans = \App\Models\PemeriksaanApat::where('id_apat', $id_apat)
+        ->orderBy('tanggal_pemeriksaan', 'desc') // urutkan terbaru dulu
+        ->get();
+
+    $apat = \App\Models\Apat::where('id_apat', $id_apat)->first();
+
+    return view('inspeksi.apat.hasil', compact('pemeriksaans', 'id_apat', 'apat'));
+}
+
     
     
 
