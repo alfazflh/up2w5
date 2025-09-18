@@ -22,19 +22,22 @@ use App\Http\Controllers\Inspeksi\DokumenIkaController;
 
 Route::get('/', fn () => view('welcome'))->name('welcome');
 
-Route::prefix('pemeriksaan')->group(function () {
-    Route::post('/store', [PemeriksaanAparController::class, 'store'])->name('pemeriksaan.store');
-    Route::delete('/{id}', [PemeriksaanAparController::class, 'destroy'])->name('pemeriksaan.destroy');
+// Pemeriksaan APAR
+Route::prefix('pemeriksaan-apar')->group(function () {
+    Route::post('/store', [PemeriksaanAparController::class, 'store'])->name('pemeriksaan-apar.store');
+    Route::delete('/{id}', [PemeriksaanAparController::class, 'destroy'])->name('pemeriksaan-apar.destroy');
     Route::get('/{id}/edit-form', [PemeriksaanAparController::class, 'editForm']);
-    Route::put('/{id}', [PemeriksaanAparController::class, 'update'])->name('pemeriksaan.update');
+    Route::put('/{id}', [PemeriksaanAparController::class, 'update'])->name('pemeriksaan-apar.update');
 });
 
-Route::prefix('pemeriksaan')->group(function () {
-    Route::post('/store', [PemeriksaanApabController::class, 'store'])->name('pemeriksaan.store');
-    Route::delete('/{id}', [PemeriksaanApabController::class, 'destroy'])->name('pemeriksaan.destroy');
+// Pemeriksaan APAB
+Route::prefix('pemeriksaan-apab')->group(function () {
+    Route::post('/store', [PemeriksaanApabController::class, 'store'])->name('pemeriksaan-apab.store');
+    Route::delete('/{id}', [PemeriksaanApabController::class, 'destroy'])->name('pemeriksaan-apab.destroy');
     Route::get('/{id}/edit-form', [PemeriksaanApabController::class, 'editForm']);
-    Route::put('/{id}', [PemeriksaanApabController::class, 'update'])->name('pemeriksaan.update');
+    Route::put('/{id}', [PemeriksaanApabController::class, 'update'])->name('pemeriksaan-apab.update');
 });
+
 
 Route::prefix('inspeksi')->group(function () {
 
