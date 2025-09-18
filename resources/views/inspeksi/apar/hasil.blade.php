@@ -489,7 +489,7 @@
                                         </button>
                                         
                                         <form id="delete-form-{{ $pemeriksaan->id }}" 
-                                            action="{{ route('pemeriksaan.destroy', $pemeriksaan->id) }}" 
+                                            action="{{ route('pemeriksaan-apar.destroy', $pemeriksaan->id) }}" 
                                             method="POST" class="hidden">
                                             @csrf
                                             @method('DELETE')
