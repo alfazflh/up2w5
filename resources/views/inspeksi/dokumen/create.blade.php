@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Dokumen IK UP2WV</title>
+    <title>Dashboard Dokumen Referensi UP2WV</title>
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/9/97/Logo_PLN.png" type="image/png" />
     @vite('resources/css/app.css')
     <style>
@@ -42,7 +42,7 @@
 
         <div class="flex flex-col text-center md:hidden">
             <h1 class="font-bold text-white leading-tight text-sm sm:text-lg">
-            DOKUMEN IK
+            DOKUMEN REFERENSI
             </h1>
             <h2 class="text-xs sm:text-sm text-white font-semibold">
             PLN PUSHARLIS UP2W V
@@ -52,7 +52,7 @@
         <div class="absolute inset-x-0 text-center hidden md:block">
             <h1 class="font-bold text-white leading-tight"
                 style="font-size: clamp(1rem, 2vw + 0.5rem, 2rem);">
-                DOKUMEN IK
+                DOKUMEN REFERENSI
             </h1>
             <h2 class="text-sm sm:text-base md:text-xl text-white font-semibold mt-1">
             PLN PUSHARLIS UP2W V
