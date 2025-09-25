@@ -844,7 +844,7 @@ function showDetail(data) {
     
         modal.classList.remove('hidden');
     
-        fetch(`/pemeriksaan/${id}/edit-form`)
+        fetch(`/pemeriksaan-apar/${id}/edit-form`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Gagal mengambil form.');
