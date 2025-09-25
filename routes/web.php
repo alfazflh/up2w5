@@ -26,7 +26,7 @@ Route::get('/', fn () => view('welcome'))->name('welcome');
 Route::prefix('pemeriksaan-apar')->group(function () {
     Route::post('/store', [PemeriksaanAparController::class, 'store'])->name('pemeriksaan-apar.store');
     Route::delete('/{id}', [PemeriksaanAparController::class, 'destroy'])->name('pemeriksaan-apar.destroy');
-    Route::get('/{id}/edit-form', [PemeriksaanAparController::class, 'editForm']);
+    Route::get('/{id}/edit-form', [PemeriksaanAparController::class, 'editForm'])->name('pemeriksaan-apar.edit-form');
     Route::put('/{id}', [PemeriksaanAparController::class, 'update'])->name('pemeriksaan-apar.update');
 });
 
