@@ -34,7 +34,7 @@ Route::prefix('pemeriksaan-apar')->group(function () {
 Route::prefix('pemeriksaan-apab')->group(function () {
     Route::post('/store', [PemeriksaanApabController::class, 'store'])->name('pemeriksaan-apab.store');
     Route::delete('/{id}', [PemeriksaanApabController::class, 'destroy'])->name('pemeriksaan-apab.destroy');
-    Route::get('/{id}/edit-form', [PemeriksaanApabController::class, 'editForm']);
+    Route::get('/{id}/edit-form', [PemeriksaanApabController::class, 'editForm'])->name('pemeriksaan-apab.edit-form');
     Route::put('/{id}', [PemeriksaanApabController::class, 'update'])->name('pemeriksaan-apab.update');
 });
 
