@@ -473,7 +473,15 @@
                                     ];
                                     @endphp
 
-                                    <div class="flex flex-wrap justify-center gap-2">
+<div class="flex flex-wrap justify-center items-center gap-2">
+    <!-- Icon Kesimpulan -->
+    <div class="flex items-center">
+        @if(strtolower($data['kesimpulan'] ?? '') === '✓ baik')
+            <span class="text-green-500 text-lg relative" style="top:1.9px;">✅</span>
+        @else
+            <span class="text-red-500 text-lg relative" style="top:1.9px;">❌</span>
+        @endif
+    </div>
                                         <button onclick='showDetail(@json($data))'
                                                 class="bg-blue-500 hover:bg-blue-600 text-white text-xs px-3 py-1 rounded">
                                             Detail
