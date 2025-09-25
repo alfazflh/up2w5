@@ -105,7 +105,7 @@ public function editForm($id)
                 'klem_selang' => 'Klem Selang',
                 'handle' => 'Handle',
                 'kondisi_fisik' => 'Kondisi Fisik',
-                'kesimpulan' => 'Kesimpulan'
+                'kesimpulan' => 'Kesimpulan',
             ])->map(function($label, $field) use ($p, $options, $segelOptions) {
                 $current = strtolower(str_replace(' ', '_', $p->$field));
                 $radios = '';
