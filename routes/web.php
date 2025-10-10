@@ -44,7 +44,9 @@ Route::prefix('inspeksi')->group(function () {
     Route::controller(AparController::class)->prefix('apar')->group(function () {
         Route::get('/', 'index')->name('apar.index');
         Route::get('/{id_apar}', 'show')->name('apar.show');
-        Route::get('/{id_apar}/inspeksi', 'create')->name('apar.inspeksi');
+        Route::get('/{id_apar}/inspeksi', 'create')
+        ->name('apar.inspeksi')
+        ->middleware('auth');;
         Route::get('/{id_apar}/hasil', 'hasil')->name('apar.hasil');
         Route::post('/store', 'store')->name('apar.store');
     });
@@ -52,7 +54,9 @@ Route::prefix('inspeksi')->group(function () {
     Route::controller(ApabController::class)->prefix('apab')->group(function () {
         Route::get('/', 'index')->name('apab.index');
         Route::get('/{id_apab}', 'show')->name('apab.show');
-        Route::get('/{id_apab}/inspeksi', 'create')->name('apab.inspeksi');
+        Route::get('/{id_apab}/inspeksi', 'create')
+        ->name('apab.inspeksi')
+        ->middleware('auth');;
         Route::get('/{id_apab}/hasil', 'hasil')->name('apab.hasil');
         Route::post('/store', 'store')->name('apab.store');
     });
@@ -60,7 +64,9 @@ Route::prefix('inspeksi')->group(function () {
     Route::controller(ApatController::class)->prefix('apat')->group(function () {
         Route::get('/', 'index')->name('apat.index');
         Route::get('/{id_apat}', 'show')->name('apat.show');
-        Route::get('/{id_apat}/inspeksi', 'create')->name('apat.inspeksi');
+        Route::get('/{id_apat}/inspeksi', 'create')
+        ->name('apat.inspeksi')
+        ->middleware('auth');;
         Route::get('/{id_apat}/hasil', 'hasil')->name('apat.hasil');
         Route::post('/store', 'store')->name('apat.store');
     });
@@ -75,7 +81,9 @@ Route::prefix('inspeksi')->group(function () {
     Route::controller(FireAlarmController::class)->prefix('fire-alarm')->group(function () {
         Route::get('/', 'index')->name('fire_alarm.index');
         Route::get('/{id_firealarm}', 'show')->name('fire_alarm.show');
-        Route::get('/{id_firealarm}/inspeksi', 'create')->name('fire_alarm.inspeksi');
+        Route::get('/{id_firealarm}/inspeksi', 'create')
+        ->name('fire_alarm.inspeksi')
+        ->middleware('auth');;
         Route::get('/{id_firealarm}/hasil', 'hasil')->name('fire_alarm.hasil');
         Route::post('/store', 'store')->name('fire_alarm.store');
     });
