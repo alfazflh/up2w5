@@ -110,7 +110,7 @@
                                         Lihat Dokumen
                                     </a>
                             
-                                    @if(Auth::check() && Auth::user()->role === 'admin')
+                                    @if(Auth::check() && Auth::user()->role === 'superadmin')
                                         <button type="button" onclick="openModal({{ $item->id }}, '{{ $item->nama_dokumen }}')"
                                             class="bg-yellow-500 hover:bg-yellow-600 text-white text-xs px-3 py-1 rounded">
                                             Edit
@@ -167,9 +167,22 @@
     </div>
 
     <!-- Tambah Dokumen -->
-    <a href="{{ route('inspeksi.dokumen.create') }}" class="fixed bottom-4 right-4 bg-gray-200 hover:bg-gray-300 text-primary rounded-full p-3 shadow-lg">
-        + Tambah Dokumen
+    @auth
+    @if(in_array(Auth::user()->role, ['superadmin', 'admin']))
+        <!-- Floating Add Button -->
+        <a href="{{ route('inspeksi.dokumen.create') }}" class="fixed bottom-4 right-4 bg-gray-200 hover:bg-gray-300 text-primary rounded-full p-3 shadow-lg">
+            + Tambah Dokumen
+        </a>
+    @endif
+@else
+    <!-- Floating Login Button -->
+    <a href="{{ route('login', ['redirect' => url()->full()]) }}"
+        class="fixed bottom-4 right-4 bg-gray-200 hover:bg-gray-300 text-primary 
+               rounded-full px-5 py-2 shadow-lg z-50 
+               sm:px-6 sm:py-3 sm:text-lg transition">
+        Login
     </a>
+@endauth
 
     @if(session('success'))
     <script>
