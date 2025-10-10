@@ -169,7 +169,9 @@ Route::prefix('inspeksi')->group(function () {
 
     Route::prefix('inspeksi')->name('inspeksi.')->group(function () {
         Route::get('/dokumen/hasil', [DokumenIkaController::class, 'hasil'])->name('dokumen.hasil');
-        Route::get('/dokumen/create', [DokumenIkaController::class, 'create'])->name('dokumen.create');
+        Route::get('/dokumen/create', [DokumenIkaController::class, 'create'])
+        ->name('dokumen.create')
+        ->middleware('auth');;
         Route::post('/dokumen', [DokumenIkaController::class, 'store'])->name('dokumen.store');
         Route::get('/dokumen/{id}/edit', [DokumenIkaController::class, 'edit'])->name('dokumen.edit');
         Route::put('/dokumen/{id}', [DokumenIkaController::class, 'update'])->name('dokumen.update');
