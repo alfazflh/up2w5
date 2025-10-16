@@ -93,12 +93,16 @@
         </div>
     </div>
 
+    @auth
+    @if(in_array(Auth::user()->role, ['superadmin', 'admin']))
     <button onclick="openModal()" 
     class="fixed bottom-4 right-4 bg-gray-200 hover:bg-gray-300 text-primary rounded-full 
            p-2 text-sm shadow-lg z-50 
            sm:p-3 sm:text-lg">
     + APAR Baru
 </button>
+@endif
+@endauth
 
 
 <!-- Modal -->
