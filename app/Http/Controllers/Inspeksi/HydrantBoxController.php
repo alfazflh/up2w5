@@ -18,6 +18,10 @@ class HydrantBoxController extends Controller
 
     public function create($id_boxhydrant)
     {
+        $user = Auth::user();
+        if (!$user || !in_array($user->role, ['admin', 'superadmin'])) {
+            return redirect()->route('hydrant_box.hasil', ['id_boxhydrant' => $id_boxhydrant]);
+        }
         $boxhydrant = BoxHydrant::where('id_boxhydrant', $id_boxhydrant)->firstOrFail();
         return view('inspeksi.hydrant_box.create', compact('boxhydrant'));
     }

@@ -17,6 +17,11 @@ class DokumenIkaController extends Controller
 
     public function create()
     {
+        $user = Auth::user();
+        if (!$user || !in_array($user->role, ['admin', 'superadmin'])) {
+            return redirect()->route('inspeksi.dokumen.hasil');
+        }
+        
         return view('inspeksi.dokumen.create');
     }
 
