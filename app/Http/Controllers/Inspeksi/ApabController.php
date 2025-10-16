@@ -19,6 +19,11 @@ class ApabController extends Controller
 
     public function create($id_apab)
     {
+        $user = Auth::user();
+        if (!$user || !in_array($user->role, ['admin', 'superadmin'])) {
+            return redirect()->route('apab.hasil', ['id_apab' => $id_apab]);
+        }
+
         $apab = Apab::where('id_apab', $id_apab)->firstOrFail();
     
         return view('inspeksi.apab.create', compact('apab'));

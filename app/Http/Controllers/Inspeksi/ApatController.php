@@ -17,6 +17,10 @@ class ApatController extends Controller
 
     public function create($id_apat)
     {
+        $user = Auth::user();
+        if (!$user || !in_array($user->role, ['admin', 'superadmin'])) {
+            return redirect()->route('apat.hasil', ['id_apat' => $id_apat]);
+        }
         $apat = \App\Models\Apat::where('id_apat', $id_apat)->firstOrFail();
         return view('inspeksi.apat.create', compact('apat'));
     }    
