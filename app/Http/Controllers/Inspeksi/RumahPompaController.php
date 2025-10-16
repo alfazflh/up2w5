@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\RumahPompa;
 use App\Models\PemeriksaanRumahPompa;
+use Illuminate\Support\Facades\Auth;
 
 class RumahPompaController extends Controller
 {
@@ -17,6 +18,10 @@ class RumahPompaController extends Controller
 
     public function create($id_rumah)
     {
+        $user = Auth::user();
+        if (!$user || !in_array($user->role, ['admin', 'superadmin'])) {
+            return redirect()->route('rumah_pompa.hasil', ['id_rumah' => $id_rumah]);
+        }
         $rumah = RumahPompa::where('id_rumah', $id_rumah)->firstOrFail();
         return view('inspeksi.rumah_pompa.create', compact('rumah'));
     }
