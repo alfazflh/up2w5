@@ -579,7 +579,7 @@ margin-top: 0;
                                 </button>
 
                                     @auth
-                                    @if(Auth::user()->role === 'admin')
+                                    @if(Auth::user()->role === 'superadmin')
                                         <button onclick="openEditModal({{ $firstItem->id }})"
                                                 class="bg-yellow-500 hover:bg-yellow-600 text-white text-xs px-3 py-1 rounded transition">
                                             Edit
@@ -759,6 +759,25 @@ margin-top: 0;
         class="fixed bottom-4 right-4 bg-gray-200 hover:bg-gray-300 text-primary rounded-full p-2 shadow-lg sm:p-3">
           + Tambah Pemeriksaan
     </a>
+    @auth
+    @if(in_array(Auth::user()->role, ['superadmin', 'admin']))
+        <!-- Floating Add Button -->
+        <a href="{{ route('apar.inspeksi', ['id_apar' => $apar->id_apar]) }}"
+            class="fixed bottom-4 right-4 bg-gray-200 hover:bg-gray-300 text-primary 
+                   rounded-full p-2 text-sm shadow-lg z-50 
+                   sm:p-3 sm:text-lg transition">
+            + Tambahkan Inspeksi
+        </a>
+    @endif
+@else
+    <!-- Floating Login Button -->
+    <a href="{{ route('login', ['redirect' => url()->full()]) }}"
+        class="fixed bottom-4 right-4 bg-gray-200 hover:bg-gray-300 text-primary 
+               rounded-full px-5 py-2 shadow-lg z-50 
+               sm:px-6 sm:py-3 sm:text-lg transition">
+        Login
+    </a>
+@endauth
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
