@@ -755,18 +755,13 @@ margin-top: 0;
     </div>
 
     <!-- Add New Button -->
-    <a href="{{ route('p3k.inspeksi', ['id_p3k' => $id_p3k]) }}"
-        class="fixed bottom-4 right-4 bg-gray-200 hover:bg-gray-300 text-primary rounded-full p-2 shadow-lg sm:p-3">
-          + Tambah Pemeriksaan
-    </a>
+
     @auth
     @if(in_array(Auth::user()->role, ['superadmin', 'admin']))
         <!-- Floating Add Button -->
-        <a href="{{ route('apar.inspeksi', ['id_apar' => $apar->id_apar]) }}"
-            class="fixed bottom-4 right-4 bg-gray-200 hover:bg-gray-300 text-primary 
-                   rounded-full p-2 text-sm shadow-lg z-50 
-                   sm:p-3 sm:text-lg transition">
-            + Tambahkan Inspeksi
+        <a href="{{ route('p3k.inspeksi', ['id_p3k' => $id_p3k]) }}"
+            class="fixed bottom-4 right-4 bg-gray-200 hover:bg-gray-300 text-primary rounded-full p-2 shadow-lg sm:p-3">
+              + Tambah Pemeriksaan
         </a>
     @endif
 @else
