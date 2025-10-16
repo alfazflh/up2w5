@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Inspeksi;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\FireAlarm; 
+use Illuminate\Support\Facades\Auth;
 
 class FireAlarmController extends Controller
 {

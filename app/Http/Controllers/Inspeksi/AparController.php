@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Apar;
 use Illuminate\Http\Request;
 use App\Models\PemeriksaanApar;
+use Illuminate\Support\Facades\Auth;
 
 
 class AparController extends Controller

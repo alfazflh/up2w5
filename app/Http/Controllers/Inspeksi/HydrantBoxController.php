@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\BoxHydrant;
 use App\Models\PemeriksaanBoxHydrant;
+use Illuminate\Support\Facades\Auth;
 
 class HydrantBoxController extends Controller
 {

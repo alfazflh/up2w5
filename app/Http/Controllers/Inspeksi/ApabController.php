@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Apab;
 use Illuminate\Http\Request;
 use App\Models\PemeriksaanApab;
+use Illuminate\Support\Facades\Auth;
 
 
 class ApabController extends Controller

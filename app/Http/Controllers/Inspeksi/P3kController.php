@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Inspeksi;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\P3k;
+use Illuminate\Support\Facades\Auth;
 
 class P3kController extends Controller
 {

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Inspeksi;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\DokumenIka;
+use Illuminate\Support\Facades\Auth;
 
 class DokumenIkaController extends Controller
 {
